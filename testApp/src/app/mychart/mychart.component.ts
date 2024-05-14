@@ -3,14 +3,15 @@ import { Chart, registerables } from 'chart.js';
 import { MasterService } from '../services/master.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { LineChartComponent } from "../line-chart/line-chart.component";
 Chart.register(...registerables);
 
 @Component({
-  selector: 'app-mychart',
-  standalone: true,
-  imports: [],
-  templateUrl: './mychart.component.html',
-  styleUrl: './mychart.component.css'
+    selector: 'app-mychart',
+    standalone: true,
+    templateUrl: './mychart.component.html',
+    styleUrl: './mychart.component.css',
+    imports: [LineChartComponent]
 })
 
 export class MychartComponent implements OnInit {
